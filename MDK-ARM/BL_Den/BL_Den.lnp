@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp.sp
+"bl_den\startup_stm32f407xx.o"
+"bl_den\app_jump.o"
+"bl_den\main.o"
+"bl_den\gpio.o"
+"bl_den\stm32f4xx_it.o"
+"bl_den\stm32f4xx_hal_msp.o"
+"bl_den\stm32f4xx_hal_tim.o"
+"bl_den\stm32f4xx_hal_tim_ex.o"
+"bl_den\stm32f4xx_hal_rcc.o"
+"bl_den\stm32f4xx_hal_rcc_ex.o"
+"bl_den\stm32f4xx_hal_flash.o"
+"bl_den\stm32f4xx_hal_flash_ex.o"
+"bl_den\stm32f4xx_hal_flash_ramfunc.o"
+"bl_den\stm32f4xx_hal_gpio.o"
+"bl_den\stm32f4xx_hal_dma_ex.o"
+"bl_den\stm32f4xx_hal_dma.o"
+"bl_den\stm32f4xx_hal_pwr.o"
+"bl_den\stm32f4xx_hal_pwr_ex.o"
+"bl_den\stm32f4xx_hal_cortex.o"
+"bl_den\stm32f4xx_hal.o"
+"bl_den\stm32f4xx_hal_exti.o"
+"bl_den\system_stm32f4xx.o"
+--library_type=microlib --strict --scatter "BL_Den\BL_Den.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "BL_Den.map" -o BL_Den\BL_Den.axf
